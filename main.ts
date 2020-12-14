@@ -2,8 +2,7 @@ declare interface Math {
     floor(x: number): number;
 }
 
-
-//% color=#27b0ba icon="\uf26c"
+//% color=#F59E20 icon="\uf26c"
 namespace OLED {
     let font: Buffer;
 
