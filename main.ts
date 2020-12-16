@@ -36,7 +36,7 @@ namespace OLED {
     let charX = 0
     let charY = 0
     let displayWidth = 128
-    let displayHeight = 64 / 8
+    let displayHeight = 32 / 8
     let screenSize = 0
     //let font: Array<Array<number>>
     let loadStarted: boolean;
@@ -310,7 +310,7 @@ namespace OLED {
         command(SSD1306_SETDISPLAYCLOCKDIV);
         command(0x80);                                  // the suggested ratio 0x80
         command(SSD1306_SETMULTIPLEX);
-        command(0x3F);
+        command(0x1F);
         command(SSD1306_SETDISPLAYOFFSET);
         command(0x0);                                   // no offset
         command(SSD1306_SETSTARTLINE | 0x0);            // line #0
@@ -321,7 +321,7 @@ namespace OLED {
         command(SSD1306_SEGREMAP | 0x1);
         command(SSD1306_COMSCANDEC);
         command(SSD1306_SETCOMPINS);
-        command(0x12);
+        command(0x02);
         command(SSD1306_SETCONTRAST);
         command(0xCF);
         command(SSD1306_SETPRECHARGE);
