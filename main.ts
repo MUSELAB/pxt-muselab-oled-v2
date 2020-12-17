@@ -301,11 +301,9 @@ namespace OLED {
         drawLine(x0, y0, x0, y1)
         drawLine(x1, y0, x1, y1)
     }
-    //% block="initialize OLED with width $width height $height"
-    //% width.defl=128
-    //% height.defl=64
+    //% block="initialize OLED"
     //% weight=9
-    export function init(width: number, height: number) {
+    export function init() {
         command(SSD1306_DISPLAYOFF);
         command(SSD1306_SETDISPLAYCLOCKDIV);
         command(0x80);                                  // the suggested ratio 0x80
@@ -331,8 +329,8 @@ namespace OLED {
         command(SSD1306_DISPLAYALLON_RESUME);
         command(SSD1306_NORMALDISPLAY);
         command(SSD1306_DISPLAYON);
-        displayWidth = width
-        displayHeight = height / 8
+        displayWidth = 128
+        displayHeight = 32 / 8
         screenSize = displayWidth * displayHeight
         charX = xOffset
         charY = yOffset
