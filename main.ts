@@ -177,6 +177,10 @@ namespace MuseOLED {
     //% weight=4
     export function newLine() {
         charY++
+        if(charY>3)
+        {
+            charY=0
+        }
         charX = xOffset
     }
     function drawChar(x: number, y: number, c: string) {
