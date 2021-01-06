@@ -154,6 +154,10 @@ namespace MuseOLED {
             drawChar(charX, charY, str.charAt(i))
             charX += 6
         }
+        while (charX <= displayWidth - 6) {
+            drawChar(charX, charY, " ".charAt(0));
+            charX += 6;
+        }
     }
     //% block="show (without newline) number $n"
     //% weight=5
